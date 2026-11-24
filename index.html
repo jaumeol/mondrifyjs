@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f2ea">
+    <meta
+      name="description"
+      content="Create original geometric compositions with Mondrify JS."
+    >
+    <title>Mondrify JS — Geometric Composition Studio</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main class="studio">
+      <header class="masthead">
+        <a class="wordmark" href="./" aria-label="Mondrify JS home">
+          MONDRIFY<span>JS</span>
+        </a>
+        <p class="edition">A GENERATIVE COMPOSITION STUDIO</p>
+      </header>
+
+      <section class="intro" aria-labelledby="page-title">
+        <div>
+          <p class="eyebrow">GEOMETRY, WITH A LITTLE CHANCE</p>
+          <h1 id="page-title">Make room<br>for the unexpected.</h1>
+        </div>
+        <p class="intro-copy">
+          Build a fresh arrangement of colored planes, shifting proportions
+          with every press. A study in balance, built in your browser.
+        </p>
+      </section>
+
+      <section class="workspace" aria-label="Composition studio">
+        <div class="art-panel">
+          <div class="panel-topline">
+            <span>COMPOSITION <span class="live-dot" aria-hidden="true"></span></span>
+            <span id="composition-meta">800 × 600 PX</span>
+          </div>
+          <div class="artboard" id="artboard">
+            <p class="empty-state" id="empty-state">
+              Your next composition<br>is one click away.
+            </p>
+          </div>
+          <div class="panel-bottomline">
+            <span id="region-meta">READY TO BEGIN</span>
+            <span id="seed-meta"></span>
+          </div>
+        </div>
+
+        <aside class="controls" aria-label="Composition settings">
+          <div class="controls-heading">
+            <p class="eyebrow">THE PARAMETERS</p>
+            <h2>Set the scene.</h2>
+          </div>
+
+          <div class="control">
+            <div class="control-label">
+              <label for="width">Canvas width</label>
+              <output id="width-value" for="width">800 px</output>
+            </div>
+            <input id="width" type="range" min="300" max="1600" value="800" step="10">
+            <div class="range-ends"><span>300</span><span>1600</span></div>
+          </div>
+
+          <div class="control">
+            <div class="control-label">
+              <label for="height">Canvas height</label>
+              <output id="height-value" for="height">600 px</output>
+            </div>
+            <input id="height" type="range" min="300" max="1600" value="600" step="10">
+            <div class="range-ends"><span>300</span><span>1600</span></div>
+          </div>
+
+          <div class="control-pair">
+            <div class="control">
+              <div class="control-label">
+                <label for="rows">Rows</label>
+                <output id="rows-value" for="rows">5</output>
+              </div>
+              <input id="rows" type="range" min="2" max="12" value="5" step="1">
+            </div>
+            <div class="control">
+              <div class="control-label">
+                <label for="columns">Columns</label>
+                <output id="columns-value" for="columns">7</output>
+              </div>
+              <input id="columns" type="range" min="2" max="12" value="7" step="1">
+            </div>
+          </div>
+
+          <div class="control">
+            <div class="control-label">
+              <label for="line-thickness">Line thickness</label>
+              <output id="line-thickness-value" for="line-thickness">8 px</output>
+            </div>
+            <input id="line-thickness" type="range" min="4" max="20" value="8" step="1">
+            <div class="range-ends"><span>4</span><span>20</span></div>
+          </div>
+
+          <div class="palette" aria-label="Composition palette">
+            <span class="swatch swatch-red" title="Red"></span>
+            <span class="swatch swatch-yellow" title="Yellow"></span>
+            <span class="swatch swatch-blue" title="Blue"></span>
+            <span class="swatch swatch-white" title="White"></span>
+            <span class="palette-caption">THE PALETTE</span>
+          </div>
+
+          <div class="actions">
+            <button class="generate-button" id="generate" type="button">
+              <span>Generate composition</span>
+              <span aria-hidden="true">↗</span>
+            </button>
+            <button class="download-button" id="download" type="button" disabled>
+              Download PNG
+              <span aria-hidden="true">↓</span>
+            </button>
+          </div>
+          <p class="note">Each composition is made locally. No uploads, no models, just chance.</p>
+        </aside>
+      </section>
+
+      <footer class="footer">
+        <span>MONDRIFY JS</span>
+        <span>AN EXERCISE IN BALANCE &amp; VARIATION</span>
+      </footer>
+    </main>
+  </body>
+</html>
